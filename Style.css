@@ -1354,7 +1354,7 @@ h7{
 }
 
 
-.me-text{
+.me-text, .sub-home p{
   color: rgb(255, 132, 0);
 }
 
@@ -1383,3 +1383,4 @@ h7{
   display: none;
 
 } */
+

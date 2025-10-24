@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="Width=device-width, initial-scale=1.0" />
+  <title>My Project 2</title>
+
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="ProjectStyle.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html#project" class="logo"
+      ><i class="bx bx-arrow-back"></i> My Project</a
+    >
+  </header>
+
+  <section class="My Project-2" id="latestproject">
+    <div class="project-title">
+      <h2>Building the Core: </h2>
+      <h1>A Spring Boot & Java Project</h1>
+    </div>
+    <div class="project-img">
+      <div class="project-img1">
+        <img src=".\src\Project-4\Project2-1.jpg" />
+      </div>
+      <div class="project-img1">
+        <img src=".\src\Project-4\Project2-2.jpg" />
+      </div>
+      <div class="project-img1">
+        <img src=".\src\Project-4\Project2-3.jpg" />
+      </div>
+      <div class="project-img1">
+        <img src=".\src\Project-4\Project2-4.jpg" />
+      </div>
+      <div class="project-img1">
+        <img src=".\src\Project-4\Project2-5.jpg" />
+      </div>
+      <div class="project-img1">
+        <img src=".\src\Project-4\Project2-6.jpg" />
+      </div>
+    </div>
+    <div class="project-content">
+
+        <a href="https://github.com/sathishofficialwork/LiveInteractiveDemonstrationProject" class="btn">Click to view source code</a>
+        
+        <h3>Problem Statement:</h3>
+        <p>
+          Automated test execution is often complex and inaccessible to non-technical users. 
+          This project creates a Spring Boot dashboard that acts as a user-friendly interface. 
+          It allows anyone to trigger Selenium test runs via GitHub Actions with a single click and 
+          view detailed results and logs in a centralized location. 
+        </p>
+      <h3>Project Overview:</h3>
+      <p>
+        The core of this project is a Spring Boot application that serves as a dashboard for a 
+        Selenium automation suite. The automation scripts are written in Java using the TestNG 
+        framework and are hosted in a GitHub repository. A GitHub Actions workflow is set up to 
+        automatically run the tests on every code push to the main branch. The Spring Boot application, 
+        when deployed, provides a clean and simple user interface (UI) to view the historical test 
+        results and, most importantly, to manually trigger a new test run with a single click. 
+        This creates a powerful feedback loop, allowing anyone on the team to initiate tests and 
+        view their outcomes without needing to interact with the command line or the GitHub 
+        Actions interface directly.
+      </p>
+      <h3>Project Detailed Explanation:</h3>
+     
+      <p><span class="sub-title-para">
+        Selenium Test Automation Suite: </span>This is the heart of the project. It's a standard 
+        Maven-based Java project using Selenium WebDriver for browser automation and TestNG for 
+        test management, assertions, and reporting. The tests are structured using a Page Object 
+        Model (POM) for maintainability and reusability. It includes an testng.xml file to 
+        Sdefine and group tests.
+      </p>
+   
+      <p><span class="sub-title-para">
+        GitHub Actions Workflow:</span> A .github/workflows/maven.yml file is configured in the repository. 
+        This YAML file defines a CI/CD pipeline. It specifies that on every push to the main branch, 
+        a job should run that checks out the code, sets up the Java environment, and executes the 
+        TestNG tests using a Maven command (mvn test).
+      </p>
+
+      <p><span class="sub-title-para">
+        Spring Boot Dashboard Application:</span> This is a separate, lightweight Spring Boot application. 
+        It's built as a web application (using a template engine like Thymeleaf or a front-end with HTML and CSS). 
+        It has a controller that handles HTTP requests.</br>
+      </p>
+
+      <p>
+        <span class="sub-title-para">Dashboard View:</span> The main page of the application displays a list of past test runs. 
+        It fetches this data, including run status (pass/fail), execution time, and a link to the detailed report, 
+        by interacting with the GitHub Actions API or by reading a local data store.</br>
+      </p>
+      <p>
+        <span class="sub-title-para">
+        Trigger Mechanism:</span> The application exposes a REST endpoint or a simple web form with a button. 
+        When a user clicks "Run Tests," the application makes a request to the GitHub Actions API to trigger a 
+        new workflow dispatch. This is the key feature that allows the Spring Boot app to kick off the 
+        automation run in the cloud.</br>
+      </p>
+      <p>
+        <span class="sub-title-para">
+        Results and Logs Integration:</span> The Spring Boot app can either store and display the results directly or, 
+        more efficiently, act as a proxy. After a test run is complete on GitHub Actions, the workflow can 
+        publish the test report (e.g.,Extent reports) as a build artifact. The Spring Boot application then 
+        provides links to these artifacts or uses a background job to download and parse them to display 
+        key metrics (total tests, passed, failed, skipped) and detailed logs on its dashboard
+      </p>
+    
+
+      
+
+      <h3>Showcase and Demonstrative Value:</h3>
+
+      <h6>This project provides a powerful and practical demonstration of several core skills:</h6>
+     
+      <p><span class="sub-title-para">
+        Software Development: </span>It showcases the ability to build a robust, standalone web 
+        application using the Spring Boot framework, complete with a clean UI, RESTful endpoints, 
+        and backend logic.
+      </p>
+   
+      <p><span class="sub-title-para">
+        Test Automation:</span> It proves proficiency in writing and maintaining a 
+        professional-grade Selenium test suite using the industry-standard Java and TestNG stack. 
+      </p>
+
+      <p><span class="sub-title-para">
+        CI/CD:</span> The integration with GitHub Actions is a clear indication of a solid 
+        understanding of modern DevOps practices. The ability to automate builds, tests, and deployments 
+        shows a grasp of continuous integration principles.</br>
+      </p>
+
+      <p>
+        <span class="sub-title-para">API Integration:</span> 
+        The project requires using GitHub's REST API to programmatically trigger a workflow, 
+        which is a key skill for integrating different services and tools.</br>
+      </p>
+
+      <p>
+        <span class="sub-title-para">Problem-Solving:</span> 
+        This project demonstrates the ability to solve a real-world problem: making an automated 
+        test suite accessible to non-technical stakeholders (e.g., project managers, business analysts) 
+        without them needing to know how to run a Git command or navigate a CI/CD tool. The UI 
+        abstracts away the underlying complexity, providing a simple, powerful interface.</br>
+      </p>
+    
+    </div>
+
+    
+  </section>
+
+  <footer class="footer">
+    <div class="footer-icontop">
+      <p>For <span>Home</span></p>
+      <a href="./index.html#home "><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <script src="test2.js"></script>
+</body>

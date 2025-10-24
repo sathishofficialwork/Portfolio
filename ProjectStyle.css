@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,400,500,600,700,800,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-color: #070606;
+  --second-bg-color: #1e1818;
+  --text-color: #fff;
+  --main-color: rgba(255, 0, 0, 0.9);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.header .sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  text-shadow: 2px 4px 8px #fe0404;
+}
+
+.bx-arrow-back {
+  color: var(--main-color);
+  text-shadow: none;
+}
+
+.project-title {
+  padding-bottom: 2rem;
+}
+
+.project-title h1 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--main-color);
+}
+
+.project-title h2 {
+  padding-top: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.project-img {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center; 
+  gap: 2rem;
+  padding-bottom: 2rem;
+  
+}
+
+.project-img .project-img1 {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  
+}
+.project-content p::before{
+    /* ⇉▶▷►▻→°>✓⌁~↠ ↪*/
+    /* content: "↪"; */
+    content: "•";
+    color: #fe0404;
+    font-weight: bold;
+}
+
+img{
+    
+max-width: 200px;
+max-height: 200px;
+
+}
+
+.project-img1 img {
+  width: 100%;
+  /* height: 70%; */
+  border-radius: 1rem;
+  transition: 0.5s ease;
+}
+
+
+.project-content h3 {
+  padding-top: 1.5rem;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+  color: var(--main-color);
+}
+
+.project-content p {
+  display: flex;
+  font-size: 1.7rem;
+  text-align: justify;
+  padding-bottom: 2rem;
+  text-indent: 1.5rem;
+  word-spacing: 2.5px;
+  line-height: 2.5rem;
+}
+
+.project-content h4 {
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--main-color);
+  font-size: 1.7rem;
+  padding-bottom: 1rem;
+}
+
+.project-content {
+  padding-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.2rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 800;
+  transition: 0.5s ease;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.5rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+}
+
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+.footer-icontop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  background: var(--main-color);
+  border-radius: 0.8rem;
+  transition: 0.5s ease;
+}
+
+.footer-icontop p {
+  font-size: 1.3rem;
+  padding-right: 1.5rem;
+}
+
+.footer-icontop span {
+  color: var(--main-color);
+}
+
+.footer-icontop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icontop a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icontop a i {
+  font-size: 2.4rem;
+  color: var(--bg-color);
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 365px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
+
+.sub-title-para{
+  display: contents;
+  color: var(--main-color);
+}
+
+h6{
+  font-size: 1.7rem;
+  text-indent: 2rem;
+  line-height: 20px;
+  word-spacing: 2.5px;
+  line-height: 2.5rem;
+
+}
+h4{
+  margin-top: 20px;
+}
